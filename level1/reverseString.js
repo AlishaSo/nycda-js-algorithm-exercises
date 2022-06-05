@@ -3,8 +3,31 @@
  * You're not allowed to use String.prototype.reverse().
  * Returns the new string.
  */
-function reverseString() {
+function reverseString(string) {
+  if(string.length == 0)
+    return string;
+  else if(string) {
+    //solution #1
+    // let newString = [];
+    // for(let i = string.length - 1; i >= 0; i--) {
+    //   newString.push(string[i]);
+    // }
+    // // return newString.join('');
 
+    //solution #2
+    return string.split('').reduceRight((finalString, char) => finalString.concat(char));
+
+    //solution #3
+    // return string.split('').reduce((finalString, char) => finalString.unshift(char), []).join('');
+    // return string;
+
+    //solution #4
+    // string.split('').forEach(char => newString.unshift(char));
+    // return newString.join('');
+  }
+  // else {
+  //   console.log('Please enter a valid string');
+  // }
 }
 
 describe('reverseString', function() {

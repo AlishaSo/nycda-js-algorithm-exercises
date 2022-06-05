@@ -1,8 +1,11 @@
 /**
  * Given a string, counts the number of words inside it. Each word is separated by a single space character.
  */
-function countWords() {
-
+function countWords(string) {
+  if(string == '')
+    return 0;
+  else
+    return string.split(' ').length;
 }
 
 describe('countWords', function() {

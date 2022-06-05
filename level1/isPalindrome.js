@@ -1,8 +1,19 @@
 /**
  * Determines whether the given string is a palindrome, i.e. if you were to reverse the order of the characters inside the string, you would get back the original string.
  */
-function isPalindrome() {
-
+function isPalindrome(string) {
+  if(string.length == 0)
+    return true;
+  // if(!string) {
+  //   console.log('Please enter a valid string');
+  //   return;
+  // }
+  if(string.length == 0)
+    return true;
+  if(string.split('').reverse().join('') == string)
+    return true;
+  else
+    return false;
 }
 
 describe('isPalindrome', function() {
